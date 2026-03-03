@@ -20,7 +20,7 @@ question = st.chat_input("Question please...")
 if question:
     st.session_state.msgs.append({"role":"user","content":question})
     st.chat_message("user").markdown(question)
-    ans = lm.invoke(question)
+    ans = lm.invoke(st.session_state.msgs)
     st.chat_message("ai").markdown(ans.content)
     st.session_state.msgs.append({"role":"ai","content":ans.content})
 
