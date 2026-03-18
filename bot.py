@@ -24,3 +24,32 @@ if question:
     st.chat_message("ai").markdown(ans.content)
     st.session_state.msgs.append({"role":"ai","content":ans.content})
 
+st.markdown("""
+    <style>
+        html,body,[data-testid="stAppViewContainer"].section.main {
+            background: linear-gradient(135deg, #0f172a, #1e293b) ! important;
+            color:white important;
+        }
+        .main-title {
+            font-size: 40px; font-weight: 700; color: white; text-align: center; margin-bottom: 10px;
+        }
+        .sub-title {
+            text-align: center; color: #cbd5e1: margin-bottom: 30px;
+        }
+        .chat-container {
+            background-color: #1e293b; padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.4);
+        }
+        .stChatMessage { 
+            border-radius: 12px !important; padding: 10px !important;
+        }
+        .stTextInput>div>div>input { 
+            background-color: #334155; 
+            color: white: 
+            border-radius: 10px;
+        }
+            footer {visibility: hidden;}
+        </style>
+    """, unsafe_allow_html=True)
+
